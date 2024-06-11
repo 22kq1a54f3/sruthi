@@ -1,0 +1,96 @@
+<html>
+    <head>
+        <title>login page</title>
+        <style>
+            .video-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
+        .video-container video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .container{
+                    margin-left:30% ;
+                    margin-right: 50%;
+                    margin-top: -2%;
+                    padding:1px;
+                    border:5px solid white;
+                    height:1000;
+                    width:600;
+                    background-color:rgba(255,255,255,0.5);
+                }
+                .container1{
+                    margin-left:25% ;
+                    margin-right: 50%;
+                    margin-top: 5%;
+                    padding:1px;
+                    border:5px solid white;
+                    height:300;
+                    width:300;
+                    background-color:rgb(227,238,239);
+                }
+        </style>
+        <body>
+            <center>
+            <form action="progress2.html" method="post"> <h2 style="color: aliceblue;font-size: 50px;font-style: oblique;"> PAYMENT PAGE</h2>
+            <div class="video-container">
+                <video autoplay muted loop id="video-background">
+                    <source src="ved2.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <center></center>
+                <div class="container">
+                    <h1>SECURE PAYMENT</h1>
+                    <h3 style="margin-left:5%"> Name on card:<span style="color: black;"> *</span></h3>
+                    <label for="name"></label>
+                    <input type="text" id="name" name="cardholder_name" required><br>
+
+                    <h3 style="margin-left:5%">Card Number: <span style="color: black;"> *</span></h3>
+                    <label for="card_number"></label>
+                    <input type="text" id="card_number" name="card_number" required><br>
+
+                    <h3 style="margin-left:5%">Expiry Date: <span style="color: black;"> *</span></h3>
+                    <label for="exp_month"></label>
+                    <input type="text" id="exp_month" name="exp_month" placeholder="MM" maxlength="2" required>
+    
+                   <input type="text" id="exp_year" name="exp_year" placeholder="YYYY" maxlength="4" required><br>
+                    
+                   <h3 style="margin-left:5%">CVV: <span style="color: black;"> *</span></h3>
+                   <label for="cvv"></label>
+                   <input type="text" id="cvv" name="cvv" maxlength="3" required><br><br>
+            
+
+                    <nav class="navbar bg-body-tertiary">
+                        <div class="container-fluid">
+                          <a class="navbar-brand">
+                            <img src="paylist.png"  width="500" height="100" class="d-inline-block align-text-top">
+                        
+                        
+                        </div>
+                      </nav>
+                      <div class="container1">
+                     <h2>Order Summary</h2>
+                     <p> NO. of Items :
+                        <input type="number" min="1" name="cloth" max="1000" step:"1" value:"1" id="meters" name="meters"> </p>
+                     <p>Shipping charges: ₹150.00</p>
+                     <p>Item Rate: ₹0.00</p>
+                     <p>Tax: ₹0.00</p>
+                     <p>Total: ₹150.00</p>
+                </div><br><br>
+
+                     <button type="submit">Pay Now</button>
+  </form>
+
+                </div>
+            </center>
+            
+        </body>
+    </center>

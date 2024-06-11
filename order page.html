@@ -1,0 +1,143 @@
+<html>
+    <head>
+        <title>login page</title>
+        <style>
+            .video-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
+        .video-container video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .container{
+                    margin-left:0% ;
+                    margin-right: 50%;
+                    padding:1px;
+                    border:5px solid white;
+                    height:1000;
+                    width:600;
+                    background-color:rgba(255,255,255,0.5);
+                }
+                .my-text-box {
+                             
+                             margin-left: 5%;         
+                          }  
+            </style>
+            <body>
+                <div class="video-container">
+                    <video autoplay muted loop id="video-background">
+                        <source src="ved1.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <center>
+                    <div class="container">
+                        <form action="payment page.html" registrationForm" onsubmit="return validateForm()">
+                <nav class="navbar bg-body-tertiary">
+                    <div class="container-fluid">
+                        <p>
+                        <img src="img3.jpg"  width="100" height="50" class="d-inline-block align-text-top" spacebarkey><span style="display: inline-block;font-size: 55px;color: black;font-style: oblique;margin-top: 1%;;">ORDER NOW </h1></span></p><hr>
+                           <h3 label for="username"style="background-color: whitesmoke;">UserName:</label><br></h3>
+                            <input type="text" id="username" name="username" required><br>       
+                            
+                            <h3 label for="username"style="background-color: whitesmoke;">Email id:</label><br></h3>
+                            <input type="email">
+                            <datalist id="email" name="email">
+                                <option value="22q1a54f3@gmail.com"></option>
+                                <option value="sruthi_778844@gmail.com"></option>
+                            </datalist>
+
+                            <h3 label for="username"style="background-color: whitesmoke;">Contact Number:</label><br></h3>
+                            <input type="text" id="contact" name="contact" pattern:[0-9]{10}required><br>
+
+                            <h3 label for="username"style="background-color: whitesmoke;">Product Code:</label><br></h3>
+                            <input type="text" id="code" name="code" required><br>
+
+                            <h3 label for="username"style="background-color: whitesmoke;">Meters Required:</label><br></h3>
+                            <input type="number" min="50" name="cloth" max="1000" step:"10" value:"5" id="meters" name="meters"><br>
+
+
+                            <h3 label for="Address" style="background-color: whitesmoke;">Address:</label><br></h3>
+                            <div class="my-text-box">
+                                <textarea rows="4" cols="25" id="address" name="address">Enter your Address here...</textarea>
+                            </div>
+                            <h3 label for="username"style="background-color: whitesmoke;">Expected date:</label><br></h3>
+                            <input type="date" id="date" name="date"><br>
+
+                            <h3 label for="username"style="background-color: whitesmoke;">Other Requirements:</label><br></h3>
+                            
+                            <label for="option1"><input type="radio" id="choice" name="choice" value="option1"> deliver as soon as possible</label><br>
+                            <label for="option2"><input type="radio" id="choice" name="choice" value="option2"> wrap the product by a gift cover with an envelope</label><br>
+                            <label for="option3"><input type="radio" id="choice" name="choice" value="option3"> others</label><br>
+
+                                    <textarea rows="4" cols="25">Enter your Requirements here...</textarea><br><br><br>
+                                
+                                    <input type="submit" value="place order" >   
+                                </center>
+                                </div>  
+                            </form>
+                                <script>
+                                     const username = document.getElementById('username').value;
+                                     const email = document.getElementById('email').value;  
+                                     const contact = document.getElementById('contact').value; 
+                                     const date = document.getElementById('date').value;
+                                     const choice = document.getElementById('choice').value; 
+                                     const meter = document.getElementById('meter').value; 
+                                     const code = document.getElementById('code').value; 
+                                     const address = document.getElementById('address').value;                               
+        if (contact == 10) {
+        alert("digits should be 10");
+        return false;
+      }
+      if (username.length < 4 || username.length > 20) {
+        alert("Username must be between 4 and 20 characters");
+        return false;
+      }
+      if (isEmpty(document.getElementById('contact').value.trim())) {
+                alert('enter your choice!');
+                return false;
+                }
+
+      if (!validateEmail(email)) {
+        alert("Invalid email format");
+        return false;
+      }
+
+      return true;
+      if (Address.length < 4 || Address.length > 20) {
+        alert("address must be between 4 and 20 characters");
+        return false;
+      }
+    
+      if (isEmpty(document.getElementById('date').value.trim())) {
+                alert('enter date!');
+                return false;
+                }
+                if (isEmpty(document.getElementById('choice').value.trim())) {
+                alert('enter your choice!');
+                return false;
+                }
+                if (isEmpty(document.getElementById('meter').value.trim())) {
+                alert('enter how meter you want!');
+                return false;
+                }            
+            
+function validateEmail(email) {
+      // A simple email validation regular expression
+      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      return emailPattern.test(email);
+    }
+    
+      
+                                </script>        
+            </body>
+            </head>
+            </html>
+

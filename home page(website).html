@@ -1,0 +1,100 @@
+<html>
+<head>
+  <title>HTML5</title>
+  <style>
+    .video-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      overflow: hidden;
+    }
+
+    .video-container video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    nav {
+      position: right;
+      margin-left: 2%;
+      top: 0;
+      height: 100vh;
+      width: 200px;
+      background-color: rgba(255, 255, 255, 0.5);
+      display: flex;
+      flex-direction: column;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 20px;
+    }
+
+    nav li {
+      margin-bottom: 10px;
+    }
+
+    nav a {
+      color: #333;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      background-color: #eeeeee;
+    }
+    .scrolling-text {
+      position: absolute; 
+      top: 0; 
+      animation: scroll-text 10s linear infinite; 
+      white-space: nowrap; 
+      overflow: hidden; 
+    }
+
+    @keyframes scroll-text {
+      0% {
+        transform: translateX(100%); 
+      }
+      100% {
+        transform: translateX(-100%); 
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="video-container">
+    <video autoplay muted loop id="video-background">
+      <source src="ved.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <nav class="navbar bg-body-tertiary">
+    <div class="container-fluid">
+      <div class="scrolling-text"> <img src="abo1.jpg" width="100" height="50" class="d-inline-block align-text-top">
+        <span style="font-size: 50px; font-style: oblique; color: black">Our Fabric World </span>
+      </div>
+
+      <nav>
+        <ul><br><br><br><br>
+          <li><a href="about us.html">ABOUT US</a></li><br><br>
+          <li><a href="registration page.html">REGISTRATION</a></li><br><br>
+          <li><a href="login page.html">LOGIN</a></li><br><br>
+          <li><a href="contact us.html">CONTACT US</a></li><br><br>
+          <li><a href="collabration form.html">COLLABORATE WITH US</a></li><br><br>
+          <li><a href="helpline.html">HELPLINE</a></li><br><br>
+          <li><a href="data collection.html">OUR FABRIC COLLECTION</a></li><br><br>
+        </ul>
+      </nav>
+    </div>
+  </nav>
+</body>
+</html>
+
+      
+  </body>

@@ -1,0 +1,62 @@
+<html lang="en">
+<head>
+    <head>
+       
+        <title>Bootstrap Example</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Progress Bar</title>
+    <style>
+    
+        #progress-container {
+            width: 80%;
+            background-color: #f3f3f3;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-top: 12%;
+        }
+        #progress-bar {
+            width: 10;
+            height: 30px;
+            background-color: #4caf50;
+            margin-left:0% ;
+            text-align: center;
+            color: white;
+            line-height: 30px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="font-size:50px;font-style:italic;color:blueviolet">Placing Order.....</h1>
+<div id="progress-container">
+    <div id="progress-bar">0%</div>
+</div>
+
+<script>
+    
+    
+    let progress = 0;
+    const progressBar = document.getElementById('progress-bar');
+
+    function updateProgress() {
+        if (progress < 100) {
+            progress++;
+            progressBar.style.width = progress + '%';
+            progressBar.textContent = progress + '%';
+            setTimeout(updateProgress, 50); // Update every 100 milliseconds
+        }
+        else{
+        alert("your response submitted")
+        setTimeout(() => window.location.href = "ord.png", 1000);
+        }
+
+        }
+   
+
+    updateProgress();
+
+</script>
+
+</body>
+</html>

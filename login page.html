@@ -1,0 +1,65 @@
+<html>
+    <head>
+        <title>login page</title>
+        <style>
+            body{
+                background-image: url("my website.jpg");background-repeat: no-repeat;background-size: cover;
+            }
+         .container{
+            
+                    margin-left:3%;
+                    margin-top: 5%;
+                    margin-bottom:0%;
+                    padding:1px;
+                    height:40%;
+                    background-color: rgba(255,255,255,0.5);
+                    width:20%;
+                    border:5px solid whitesmoke;
+                    
+                  
+         }
+          </style>
+         <body>
+            <form action="home page(website).html" method="post">
+               <input type="hidden" name="fabricCode" value="A1643"> <button type="submit">back</button>
+           </form>
+            <CENter><script>
+                          // User Validations
+                  function loginValidation() {
+                              // Ramesh
+                    var uname = document.myform.username.value;
+                               //Ramesh@123
+                    var password = document.myform.password.value;
+                              if(uname==null || uname=="") {
+                                alert("Name cant be blank")
+                                return false;  
+                             } else if (password.length<6){
+                                alert("Password Must be 6 letters")
+                                return false;
+                             }  
+                             return true                 
+                          }           
+                       </script>
+                       </head>
+                       <body>
+                      
+                           <h2 style="font-size: 50px; font-style: oblique;">LOGIN PAGE</h2>  
+                           <div class="container">
+                 <form name="myform" action="login sucess page.html" 	onsubmit="return loginValidation(this)">
+                  
+                 <h3 style="color:black">user id :</h3><br> <input type="text" name="username"> <br>
+                <h3 style="color:black"> Password :</h3><br>  <input type="password" name="password"> <br>
+                <a href="registration page.html">forget password?</a> 
+                       <br><br><br>   <input type="submit" value="Submit"> 
+
+                 </div>    
+                         </form>
+                    </body>
+   
+                           
+                 </html>
+            </CENter>
+         </body>
+        </head>
+        </html>
+       
